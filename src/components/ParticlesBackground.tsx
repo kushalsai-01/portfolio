@@ -12,8 +12,12 @@ export default function ParticlesBackground() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    // Narrow to non-null for use in inner classes/closures
+    const canvasEl = canvas as HTMLCanvasElement
+    const ctxEl = ctx as CanvasRenderingContext2D
+
+    canvasEl.width = window.innerWidth
+    canvasEl.height = window.innerHeight
 
     const particles: Particle[] = []
     const particleCount = 40
@@ -27,8 +31,8 @@ export default function ParticlesBackground() {
       opacity: number
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * canvasEl.width
+        this.y = Math.random() * canvasEl.height
         this.size = Math.random() * 2.5 + 1
         this.speedX = Math.random() * 0.3 - 0.15
         this.speedY = Math.random() * 0.3 - 0.15
@@ -39,19 +43,18 @@ export default function ParticlesBackground() {
         this.x += this.speedX
         this.y += this.speedY
 
-        if (this.x > canvas.width) this.x = 0
-        else if (this.x < 0) this.x = canvas.width
+        if (this.x > canvasEl.width) this.x = 0
+        else if (this.x < 0) this.x = canvasEl.width
 
-        if (this.y > canvas.height) this.y = 0
-        else if (this.y < 0) this.y = canvas.height
+        if (this.y > canvasEl.height) this.y = 0
+        else if (this.y < 0) this.y = canvasEl.height
       }
 
       draw() {
-        if (!ctx) return
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`
-        ctx.beginPath()
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fill()
+        ctxEl.fillStyle = `rgba(255, 255, 255, ${this.opacity})`
+        ctxEl.beginPath()
+        ctxEl.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+        ctxEl.fill()
       }
     }
 
@@ -64,8 +67,7 @@ export default function ParticlesBackground() {
     ).matches
 
     function animate() {
-      if (!ctx || !canvas) return
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctxEl.clearRect(0, 0, canvasEl.width, canvasEl.height)
 
       if (!prefersReducedMotion) {
         particles.forEach((particle) => {
@@ -80,8 +82,8 @@ export default function ParticlesBackground() {
     animate()
 
     const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvasEl.width = window.innerWidth
+      canvasEl.height = window.innerHeight
     }
 
     window.addEventListener('resize', handleResize)
