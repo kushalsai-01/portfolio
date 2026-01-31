@@ -9,8 +9,7 @@ const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Resume', href: '#resume' },
-  { name: 'Blog', href: '#blog' },
-    { name: 'GitHub', href: 'https://github.com/kushalsai-01', external: true },
+  { name: 'GitHub', href: 'https://github.com/kushalsai-01', external: true },
 ]
 
 export default function Navbar() {
@@ -21,7 +20,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 
-      const sections = ['hero', 'about', 'projects', 'resume', 'blog']
+      const sections = ['hero', 'about', 'projects', 'resume']
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {

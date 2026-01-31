@@ -6,25 +6,11 @@ import { useRef } from 'react'
 
 const experience = [
   {
-    period: '2023 - Present',
-    role: 'Senior Backend Engineer',
-    company: 'Tech Company',
+    period: 'Jan 2025 – Apr 2025',
+    role: 'Research Assistant',
+    company: 'Data Science Department, Bangalore, India',
     description:
-      'Lead backend development for distributed systems handling 10M+ requests/day. Architected microservices infrastructure with Golang and Kubernetes.',
-  },
-  {
-    period: '2021 - 2023',
-    role: 'Backend Engineer',
-    company: 'Startup Inc',
-    description:
-      'Built scalable REST APIs and event-driven architectures. Reduced database query times by 60% through optimization and caching strategies.',
-  },
-  {
-    period: '2020 - 2021',
-    role: 'Software Engineer',
-    company: 'Dev Solutions',
-    description:
-      'Developed backend services and CLI tools for internal developer workflows. Implemented CI/CD pipelines and infrastructure automation.',
+      'Analyzed and modeled multi-source academic, behavioral, and demographic datasets (10K+ records) to predict student performance and career outcomes. Built end-to-end ML pipelines using Logistic Regression, Random Forest, and Gradient Boosting, improving baseline accuracy by 18–25%. Performed systematic model evaluation and hyperparameter tuning using cross-validation and metrics such as ROC-AUC and F1-score.',
   },
 ]
 
