@@ -46,56 +46,59 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 px-6 lg:px-8 py-12 bg-black">
+    <footer id="contact" className="border-t border-white/10 px-6 lg:px-8 py-16 bg-black">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center space-y-6">
-          {/* Social links */}
-          <div className="flex items-center gap-6">
-            {socialLinks.map((link) => (
-              <motion.a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-neutral-600 hover:text-white transition-colors"
-                aria-label={link.name}
-              >
-                {link.icon}
-              </motion.a>
-            ))}
-          </div>
-
-          {/* Copyright */}
-          <div className="text-center space-y-2">
-            <p className="text-sm text-neutral-500">
-              Built with Next.js, React, Tailwind CSS, and Framer Motion
+        <div className="space-y-12">
+          {/* Contact CTA */}
+          <div className="text-center space-y-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white">Let's Work Together</h2>
+            <p className="text-neutral-400 max-w-xl mx-auto">
+              I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll do my best to get back to you!
             </p>
-            <p className="text-sm text-neutral-600">
-              © {new Date().getFullYear()} All rights reserved.
-            </p>
-          </div>
-
-          {/* Back to top */}
-          <motion.a
-            href="#hero"
-            whileHover={{ y: -2 }}
-            className="text-primary hover:text-primary-light transition-colors text-sm font-mono flex items-center gap-2 group"
-          >
-            <span>Back to top</span>
-            <svg
-              className="w-4 h-4 group-hover:-translate-y-1 transition-transform"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <a
+              href="mailto:gkushalsai2006@gmail.com"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-xl hover:bg-neutral-100 transition-all duration-200"
             >
-              <path d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-            </svg>
-          </motion.a>
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Get In Touch
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-white/10"></div>
+
+          {/* Bottom section */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Social links */}
+            <div className="flex items-center gap-4">
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white hover:border-white/30 transition-all"
+                  aria-label={link.name}
+                >
+                  {link.icon}
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Copyright */}
+            <div className="text-center md:text-right">
+              <p className="text-sm text-neutral-500">
+                Built with Next.js, Tailwind CSS & Framer Motion
+              </p>
+              <p className="text-sm text-neutral-600">
+                © {new Date().getFullYear()} Kushal Sai. All rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

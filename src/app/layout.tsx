@@ -16,8 +16,15 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Backend Software Engineer',
-  description: 'Backend-focused software engineer specializing in scalable systems, infrastructure, and developer tools.',
+  title: 'Kushal Sai | Full Stack Developer & ML Engineer',
+  description: 'Full Stack Developer and ML Engineer building AI-powered applications, RAG systems, and production-grade web apps. CS undergrad with research experience in Machine Learning.',
+  keywords: ['Full Stack Developer', 'ML Engineer', 'React', 'Node.js', 'Python', 'Machine Learning', 'RAG', 'AI'],
+  authors: [{ name: 'Kushal Sai' }],
+  openGraph: {
+    title: 'Kushal Sai | Full Stack Developer & ML Engineer',
+    description: 'Building AI-powered applications and full-stack systems.',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
