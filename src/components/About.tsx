@@ -40,20 +40,18 @@ export default function About() {
             {/* Bio */}
             <div className="space-y-6 text-neutral-400 leading-relaxed">
               <p>
-                I am a backend-focused software engineer interested in building
-                scalable systems, infrastructure tooling, and reliable APIs. I work
-                close to system internals—databases, distributed systems, observability,
-                and backend architecture.
+                I am a full stack developer who enjoys building web applications
+                from frontend to backend. I like working on projects that solve
+                real problems and deliver good user experiences.
               </p>
               <p>
-                My primary stack includes Golang, Java, Python, and TypeScript. I
-                focus on writing clean, maintainable code with strong fundamentals
-                in system design, data modeling, and performance.
+                My stack includes React, Node.js, Python, and TypeScript. I focus
+                on writing clean, maintainable code and continuously learning new
+                technologies.
               </p>
               <p>
-                I have experience working with real datasets, building ML pipelines,
-                and designing production-like backend systems with monitoring,
-                alerting, and security in mind.
+                I have experience with data analysis, machine learning projects,
+                and building production-ready applications with proper architecture.
               </p>
             </div>
 

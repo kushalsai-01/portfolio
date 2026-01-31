@@ -51,14 +51,14 @@ export default function Hero() {
             variants={itemVariants}
             className="text-2xl lg:text-3xl text-neutral-400 font-light"
           >
-            Backend-focused Software Engineer
+            Full Stack Developer
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
             className="text-neutral-500 text-lg leading-relaxed max-w-xl"
           >
-            I build scalable backend systems, infrastructure tools, and developer-focused platforms with strong fundamentals in systems and data.
+            I build web applications and scalable systems with a focus on clean code and good user experience.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex gap-4 pt-4">

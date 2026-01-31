@@ -62,8 +62,7 @@ export default function Projects() {
               Featured Projects
             </h2>
             <p className="text-neutral-500 max-w-2xl">
-              A selection of recent projects showcasing backend systems, infrastructure
-              tools, and developer-focused solutions.
+              A selection of projects I've worked on, from web apps to ML-powered tools.
             </p>
           </div>
 
