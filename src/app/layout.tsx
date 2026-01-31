@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import ParticlesBackground from '@/components/ParticlesBackground'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -34,8 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="noise-bg bg-black text-white">
-        <ParticlesBackground />
+      <body className="bg-background text-text-primary">
         <Navbar />
         <main>{children}</main>
         <Footer />
