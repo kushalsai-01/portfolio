@@ -96,8 +96,9 @@ export default function Resume() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  whileHover={{ x: 5, borderColor: 'rgba(161, 161, 170, 0.5)' }}
                   className="relative bg-surface border border-surface-border rounded-2xl p-6 
-                           hover:border-text-muted transition-all duration-200"
+                           transition-all duration-200 cursor-default"
                 >
                   {/* Timeline dot */}
                   <div className="absolute -left-[9px] top-8 w-4 h-4 bg-accent rounded-full border-4 border-background hidden lg:block" />
@@ -158,8 +159,9 @@ export default function Resume() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  whileHover={{ x: -5, borderColor: 'rgba(161, 161, 170, 0.5)' }}
                   className="bg-surface border border-surface-border rounded-2xl p-6 
-                           hover:border-text-muted transition-all duration-200"
+                           transition-all duration-200 cursor-default"
                 >
                   <div className="space-y-4">
                     <div>

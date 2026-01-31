@@ -92,6 +92,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
+                whileHover={{ y: -5 }}
                 className="group relative"
               >
                 {/* Gradient border effect */}
@@ -189,8 +190,9 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
                   className="group bg-surface/50 border border-surface-border rounded-xl p-6 
-                           hover:bg-surface hover:border-text-muted transition-all duration-200 hover-lift"
+                           hover:bg-surface hover:border-text-muted transition-all duration-200"
                 >
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">

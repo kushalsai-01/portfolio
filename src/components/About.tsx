@@ -130,8 +130,9 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
                 className="group relative bg-surface border border-surface-border rounded-2xl p-6 
-                         hover:border-text-muted transition-all duration-300 hover-lift"
+                         hover:border-text-muted transition-all duration-300 cursor-default"
               >
                 {/* Gradient accent line */}
                 <div className={`absolute top-0 left-6 right-6 h-px bg-gradient-to-r ${item.gradient} opacity-50 group-hover:opacity-100 transition-opacity`} />
@@ -158,8 +159,9 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
+                  whileHover={{ y: -3, borderColor: 'rgba(161, 161, 170, 0.5)' }}
                   className="group bg-surface/50 border border-surface-border rounded-xl p-5 
-                           hover:bg-surface hover:border-text-muted transition-all duration-200"
+                           hover:bg-surface transition-all duration-200 cursor-default"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-accent-muted rounded-lg text-accent">

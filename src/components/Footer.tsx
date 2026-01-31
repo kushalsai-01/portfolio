@@ -131,7 +131,7 @@ export default function Footer() {
                   aria-label={link.name}
                 >
                   {link.icon}
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
