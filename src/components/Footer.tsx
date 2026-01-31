@@ -120,7 +120,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-3">
               {socialLinks.map((link) => (
-                <a
+                <motion.a
                   key={link.name}
                   href={link.href}
                   target={link.href.startsWith('mailto:') ? undefined : '_blank'}
@@ -129,6 +129,8 @@ export default function Footer() {
                            hover:text-text-primary hover:border-text-muted hover:bg-surface-hover
                            transition-all duration-200"
                   aria-label={link.name}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {link.icon}
                 </motion.a>
