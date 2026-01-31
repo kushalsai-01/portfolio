@@ -8,27 +8,82 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#2563EB',
-          light: '#3B82F6',
-          dark: '#1D4ED8',
+        // Dark industry-grade theme (Vercel/Linear inspired)
+        background: {
+          DEFAULT: '#0A0A0B',
+          secondary: '#111113',
+          tertiary: '#18181B',
         },
-        secondary: '#6B7280',
-        background: '#F9FAFB',
-        surface: '#FFFFFF',
+        surface: {
+          DEFAULT: '#18181B',
+          hover: '#1F1F23',
+          border: '#27272A',
+        },
+        accent: {
+          DEFAULT: '#3B82F6',
+          light: '#60A5FA',
+          dark: '#2563EB',
+          muted: 'rgba(59, 130, 246, 0.15)',
+        },
         text: {
-          primary: '#111827',
-          secondary: '#4B5563',
-          muted: '#6B7280',
+          primary: '#FAFAFA',
+          secondary: '#A1A1AA',
+          muted: '#71717A',
+        },
+        // Gradient colors for premium feel
+        gradient: {
+          start: '#3B82F6',
+          mid: '#8B5CF6',
+          end: '#EC4899',
+        },
+        // Status colors
+        success: {
+          DEFAULT: '#10B981',
+          muted: 'rgba(16, 185, 129, 0.15)',
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-jetbrains-mono)', 'monospace'],
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'SF Mono', 'monospace'],
+      },
+      fontSize: {
+        'display': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
+        'display-sm': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
       },
       boxShadow: {
-        'card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-        'card-hover': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        'glow': '0 0 60px -15px rgba(59, 130, 246, 0.3)',
+        'glow-sm': '0 0 30px -10px rgba(59, 130, 246, 0.25)',
+        'card': '0 0 0 1px rgba(255, 255, 255, 0.05)',
+        'card-hover': '0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 40px -12px rgba(0, 0, 0, 0.5)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'grid-pattern': 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'glow-pulse': 'glowPulse 4s ease-in-out infinite',
+        'gradient': 'gradient 8s ease infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        glowPulse: {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.8' },
+        },
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
     },
   },
